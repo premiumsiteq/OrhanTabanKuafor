@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Orhan Taban Kuaför | Ataşehir Luxury Hair Studio</title>
+  <meta name="description" content="Orhan Taban Kuaför Ataşehir'de vizyoner saç tasarımı, balyaj, boya, kesim ve premium salon deneyimi sunar. 5.0 puanlı ve 320 yorumlu güçlü bir kadın kuaförü markası." />
+  <meta name="theme-color" content="#0a0a0d" />
+  <meta property="og:title" content="Orhan Taban Kuaför" />
+  <meta property="og:description" content="Trendlerin ötesinde vizyon, zarif yaklaşım ve güçlü memnuniyetle premium kuaför deneyimi." />
+  <meta property="og:type" content="website" />
+  <style>
+    :root{
+      --bg:#0a0a0d;
+      --bg-2:#101016;
+      --panel:rgba(255,255,255,.055);
+      --panel-strong:rgba(255,255,255,.08);
+      --line:rgba(255,255,255,.09);
+      --text:#f7f3ee;
+      --muted:#b7ada3;
+      --gold:#d2ab7f;
+      --gold-2:#f3dbc2;
+      --rose:#9d7363;
+      --shadow:0 28px 80px rgba(0,0,0,.40);
+      --radius-xl:40px;
+      --radius-lg:28px;
+      --radius-md:22px;
+      --max:1260px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 0% 0%, rgba(210,171,127,.13), transparent 18%),
+        radial-gradient(circle at 100% 0%, rgba(255,255,255,.05), transparent 18%),
+        radial-gradient(circle at 50% 100%, rgba(157,115,99,.16), transparent 24%),
+        linear-gradient(180deg,#09090b 0%, #111117 46%, #08080a 100%);
+      overflow-x:hidden;
+    }
+
+    a{text-decoration:none;color:inherit}
+    img{display:block;max-width:100%}
+    .container{width:min(calc(100% - 32px), var(--max));margin:0 auto}
+    .section{padding:96px 0;position:relative}
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;
+      background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);box-shadow:var(--shadow);
+      color:var(--gold-2);font-size:.82rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase
+    }
+    .eyebrow::before{content:"";width:8px;height:8px;border-radius:999px;background:linear-gradient(135deg,var(--gold),#7e5a45)}
+    .title{font-size:clamp(3.3rem,6vw,6.6rem);line-height:.9;letter-spacing:-.065em;margin:18px 0 18px;max-width:10.5ch}
+    .subhead{font-size:clamp(2rem,3.2vw,3.4rem);line-height:1.02;letter-spacing:-.05em;margin:0 0 14px}
+    .lead{font-size:1.05rem;line-height:1.82;color:var(--muted)}
+    .muted{color:var(--muted)}
+
+    .site-header{position:sticky;top:0;z-index:90;background:rgba(10,10,13,.76);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{min-height:84px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .brand-mark{width:56px;height:56px;border-radius:18px;position:relative;overflow:hidden;background:linear-gradient(145deg,#18181c,#3a2c27 46%,#d2ab7f 100%);box-shadow:0 18px 34px rgba(0,0,0,.36)}
+    .brand-mark::before,.brand-mark::after{content:"";position:absolute;border-radius:999px;background:rgba(255,255,255,.16)}
+    .brand-mark::before{width:70px;height:14px;left:-12px;top:15px;transform:rotate(-34deg)}
+    .brand-mark::after{width:48px;height:10px;right:-8px;bottom:13px;transform:rotate(-34deg)}
+    .brand strong{display:block;font-size:1rem}
+    .brand span{display:block;font-size:.8rem;color:var(--muted)}
+    .nav-links,.nav-actions{display:flex;align-items:center;gap:22px}
+    .nav-links a{font-size:.95rem;color:#efe6dc}
+    .menu-toggle{display:none;background:none;border:none;padding:8px}
+    .menu-toggle span{display:block;width:24px;height:2px;background:var(--text);margin:5px 0;border-radius:2px}
+    .mobile-menu{display:none;padding-bottom:18px}
+
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 22px;border-radius:999px;border:none;cursor:pointer;font-weight:800;transition:transform .24s ease, box-shadow .24s ease, background .24s ease}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:linear-gradient(135deg,var(--gold),#9f6e53);color:#1a110a;box-shadow:0 18px 36px rgba(210,171,127,.20)}
+    .btn-secondary{background:rgba(255,255,255,.05);color:var(--text);border:1px solid rgba(255,255,255,.12);box-shadow:var(--shadow)}
+
+    .hero{padding:34px 0 56px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:28px;align-items:center}
+    .hero-copy{padding:54px 0}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin:30px 0 26px}
+    .hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .stat{padding:18px;border-radius:22px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);box-shadow:var(--shadow)}
+    .stat strong{display:block;font-size:1.2rem;margin-bottom:6px;color:var(--gold-2)}
+    .stat span{display:block;color:var(--muted);font-size:.92rem;line-height:1.5}
+
+    .hero-visual{position:relative;min-height:720px;display:grid;place-items:center}
+    .visual-shell{width:min(100%,610px);height:720px;padding:20px;border-radius:42px;position:relative;overflow:hidden;background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.10);box-shadow:0 34px 90px rgba(0,0,0,.38);backdrop-filter:blur(14px)}
+    .visual-shell::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 72% 16%, rgba(210,171,127,.18), transparent 18%), radial-gradient(circle at 16% 84%, rgba(255,255,255,.08), transparent 20%), linear-gradient(145deg, rgba(255,255,255,.08), transparent 42%);pointer-events:none}
+    .visual-core{position:relative;height:100%;border-radius:34px;overflow:hidden;border:1px solid rgba(255,255,255,.08);background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)), linear-gradient(145deg, #17171c 0%, #2a221f 38%, #795f4c 100%)}
+    .visual-core::before{content:"";position:absolute;inset:22px;border-radius:28px;background:radial-gradient(circle at 52% 12%, rgba(255,255,255,.14), transparent 24%), radial-gradient(circle at 72% 20%, rgba(210,171,127,.22), transparent 22%), linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.01));}
+    .visual-core::after{content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:74%;height:82%;border-radius:280px 280px 34px 34px/340px 340px 36px 36px;background:radial-gradient(circle at 50% 10%, rgba(255,255,255,.16), transparent 18%), linear-gradient(180deg, rgba(255,255,255,.03), rgba(0,0,0,.06)), linear-gradient(145deg,#1b1c20 0%, #4d3d35 48%, #d7b08a 100%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.06), 0 34px 80px rgba(0,0,0,.26)}
+    .hair-wave{position:absolute;left:50%;top:35%;transform:translateX(-50%);width:64%;height:120px;border-radius:999px;background:radial-gradient(circle at 50% 50%, rgba(32,22,18,.90), rgba(18,18,20,.3) 60%, transparent 72%);filter:blur(10px);z-index:1}
+    .visual-ribbon{position:absolute;right:36px;top:108px;width:148px;height:18px;border-radius:999px;background:linear-gradient(90deg,#f0e6d8,#bca084,#f0e6d8);transform:rotate(44deg);box-shadow:0 8px 24px rgba(0,0,0,.24)}
+    .visual-ribbon::after{content:"";position:absolute;right:-18px;top:-9px;width:34px;height:34px;border-radius:10px;background:linear-gradient(145deg,#242428,#6d5344);box-shadow:var(--shadow)}
+    .hero-badge,.hero-float,.hero-strip,.hero-note{position:absolute;z-index:2;background:rgba(12,12,15,.58);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.10);box-shadow:var(--shadow)}
+    .hero-badge{left:24px;top:24px;max-width:252px;padding:16px 18px;border-radius:18px}
+    .hero-badge strong{display:block;margin-bottom:6px}
+    .hero-badge span{font-size:.84rem;color:var(--muted);line-height:1.5}
+    .hero-float{right:20px;bottom:24px;max-width:250px;padding:18px;border-radius:20px}
+    .hero-float strong{display:block;font-size:1.45rem;line-height:1;color:var(--gold-2)}
+    .hero-float span{display:block;margin-top:8px;font-size:.88rem;color:var(--muted);line-height:1.5}
+    .hero-strip{left:28px;bottom:132px;padding:10px 14px;border-radius:999px;font-size:.83rem;font-weight:800;color:var(--gold-2)}
+    .hero-note{right:26px;top:26px;padding:12px 14px;border-radius:16px;font-size:.84rem;color:#f3e1d2;max-width:194px}
+    .glow{position:absolute;border-radius:999px;filter:blur(48px);opacity:.44;pointer-events:none}
+    .glow.one{width:180px;height:180px;right:0;top:96px;background:rgba(210,171,127,.20)}
+    .glow.two{width:240px;height:240px;left:-26px;bottom:22px;background:rgba(157,115,99,.20)}
+
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:28px}
+    .cards-4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .trust-card,.service-card,.review-card,.faq-item,.contact-card,.hours-card,.gallery-card,.cta-panel,.compare-card,.proof-band{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);box-shadow:var(--shadow)}
+    .trust-card{padding:24px;border-radius:24px}
+    .trust-card h3,.service-card h3,.review-card h3,.faq-item h3,.compare-card h3,.proof-band h3{margin:0 0 10px;font-size:1.04rem}
+    .trust-card p,.service-card p,.review-card p,.faq-item p,.compare-card p,.proof-band p{margin:0;color:var(--muted);line-height:1.72}
+    .icon{width:46px;height:46px;border-radius:16px;display:grid;place-items:center;margin-bottom:14px;background:linear-gradient(135deg,rgba(210,171,127,.16),rgba(157,115,99,.12));font-weight:900;color:var(--gold-2)}
+
+    .proof-grid{display:grid;grid-template-columns:1.18fr .82fr;gap:18px}
+    .proof-band{padding:28px;border-radius:26px}
+    .proof-band strong{display:block;font-size:2.7rem;letter-spacing:-.05em;margin-bottom:8px;color:var(--gold-2)}
+
+    .compare-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:24px;align-items:stretch}
+    .compare-stage{min-height:560px;position:relative;overflow:hidden;border-radius:30px;background:linear-gradient(160deg,#111216,#1f1a1a 60%,#634c3e);border:1px solid rgba(255,255,255,.08);box-shadow:var(--shadow)}
+    .compare-sides{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr}
+    .side{position:relative;padding:28px}
+    .side::before{content:"";position:absolute;inset:20px;border-radius:24px;border:1px solid rgba(255,255,255,.14)}
+    .side.before::after,.side.after::after{content:"";position:absolute;inset:20px;border-radius:24px}
+    .side.before::after{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01)),radial-gradient(circle at top center,rgba(255,255,255,.07),transparent 28%),linear-gradient(145deg,rgba(36,36,38,.40),rgba(22,22,24,.34))}
+    .side.after::after{background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.01)),radial-gradient(circle at top center,rgba(210,171,127,.15),transparent 28%),linear-gradient(145deg,rgba(94,68,51,.38),rgba(210,171,127,.16))}
+    .compare-divider{position:absolute;left:50%;top:0;bottom:0;width:3px;background:linear-gradient(180deg,transparent,var(--gold),transparent);transform:translateX(-50%);z-index:2}
+    .compare-handle{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:74px;height:74px;border-radius:999px;background:#141417;display:grid;place-items:center;z-index:3;border:1px solid rgba(255,255,255,.10);box-shadow:var(--shadow);font-weight:900;color:var(--gold-2)}
+    .pill{position:absolute;left:34px;bottom:34px;padding:10px 14px;border-radius:999px;background:rgba(18,18,20,.84);font-size:.84rem;font-weight:800;color:var(--gold-2);z-index:2}
+    .compare-side{display:grid;gap:18px}
+    .compare-card{padding:24px;border-radius:24px}
+
+    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .service-card{padding:24px;border-radius:26px;position:relative;overflow:hidden}
+    .service-card::after{content:"";position:absolute;right:-18px;top:-18px;width:110px;height:110px;border-radius:30px;background:linear-gradient(135deg,rgba(210,171,127,.14),rgba(157,115,99,.10));transform:rotate(18deg)}
+    .tag{display:inline-flex;padding:9px 12px;border-radius:999px;background:rgba(210,171,127,.12);font-size:.78rem;font-weight:800;color:var(--gold-2);margin-bottom:14px}
+
+    .review-track{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(320px,1fr);gap:18px;overflow:auto;scrollbar-width:none;padding-bottom:8px}
+    .review-track::-webkit-scrollbar{display:none}
+    .review-card{padding:24px;border-radius:24px;min-height:300px}
+    .review-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px}
+    .name{font-weight:800}
+    .stars{color:var(--gold);letter-spacing:.14em}
+
+    .gallery-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:230px 230px;gap:18px}
+    .gallery-card{position:relative;overflow:hidden;border-radius:28px;padding:22px}
+    .gallery-card.large{grid-row:1 / span 2}
+    .gallery-card::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(0,0,0,.30)),radial-gradient(circle at top left,rgba(255,255,255,.10),transparent 30%),linear-gradient(145deg,#15151a,#28211d 58%,#89684e)}
+    .gallery-card:nth-child(2)::before{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(0,0,0,.30)),radial-gradient(circle at top left,rgba(255,255,255,.10),transparent 30%),linear-gradient(145deg,#141419,#2b221e 58%,#9c7760)}
+    .gallery-card:nth-child(3)::before{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(0,0,0,.30)),radial-gradient(circle at top left,rgba(255,255,255,.10),transparent 30%),linear-gradient(145deg,#14141a,#251f1d 58%,#7b5a48)}
+    .gallery-card:nth-child(4)::before{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(0,0,0,.30)),radial-gradient(circle at top left,rgba(255,255,255,.10),transparent 30%),linear-gradient(145deg,#141419,#251f1c 58%,#a17b61)}
+    .gallery-card>*{position:relative;z-index:1}
+    .gallery-card span{display:inline-flex;padding:9px 12px;border-radius:999px;background:rgba(18,18,20,.84);font-size:.8rem;font-weight:800;color:var(--gold-2)}
+    .gallery-card h3{margin:12px 0 0;max-width:13ch;font-size:1.18rem;line-height:1.06;color:#fff}
+
+    .cta-panel{padding:36px;border-radius:30px;display:flex;align-items:center;justify-content:space-between;gap:18px;background:linear-gradient(135deg,#16161b,#2b211d 58%,#705441)}
+    .cta-panel p{margin:10px 0 0;max-width:54ch;line-height:1.7;color:#e4cfbe}
+
+    .faq-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .faq-item{padding:24px;border-radius:24px}
+
+    .contact-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:20px}
+    .contact-stack{display:grid;gap:18px}
+    .contact-card,.hours-card{padding:24px;border-radius:26px}
+    .row{padding:14px 0;border-bottom:1px solid var(--line)}
+    .row:last-child{border-bottom:none;padding-bottom:0}
+    .label{display:block;font-size:.8rem;font-weight:800;color:var(--gold-2);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+    .hours-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid var(--line)}
+    .hours-row:last-child{border-bottom:none;padding-bottom:0}
+    .hours-row span:last-child{font-weight:800}
+    .map{min-height:100%;overflow:hidden;border-radius:28px;border:1px solid rgba(255,255,255,.08);box-shadow:var(--shadow);background:#fff}
+    .map iframe{width:100%;height:100%;min-height:620px;border:0}
+
+    footer{padding:26px 0 112px;border-top:1px solid rgba(255,255,255,.06)}
+    .footer-grid{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+    .footer-links{display:flex;gap:16px;flex-wrap:wrap;color:var(--muted)}
+    .footer-note{font-size:.92rem;color:var(--muted)}
+    .credit{font-size:.78rem;color:#c8b09a;opacity:.88}
+
+    .floating-cta{position:fixed;left:16px;right:16px;bottom:16px;z-index:55;display:none;grid-template-columns:1fr 1fr;gap:12px}
+
+    [data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .78s ease, transform .78s ease}
+    [data-reveal].is-visible{opacity:1;transform:none}
+
+    @media (max-width:1080px){
+      .hero-grid,.compare-grid,.contact-grid,.proof-grid{grid-template-columns:1fr}
+      .cards-4{grid-template-columns:repeat(2,1fr)}
+      .services-grid{grid-template-columns:repeat(2,1fr)}
+      .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:260px 220px 220px}
+      .gallery-card.large{grid-column:1 / span 2;grid-row:auto}
+      .visual-shell{height:620px}
+      .cta-panel{flex-direction:column;align-items:flex-start}
+    }
+    @media (max-width:780px){
+      .section{padding:74px 0}
+      .nav-links,.nav-actions{display:none}
+      .menu-toggle{display:block}
+      .mobile-menu{gap:12px}
+      .hero{padding-top:20px}
+      .hero-stats,.cards-4,.services-grid,.faq-grid{grid-template-columns:1fr}
+      .gallery-grid{grid-template-columns:1fr;grid-template-rows:auto}
+      .gallery-card,.gallery-card.large{min-height:220px}
+      .review-track{grid-auto-columns:86%}
+      .section-head{flex-direction:column;align-items:flex-start}
+      .map iframe{min-height:360px}
+      .floating-cta{display:grid}
+      .hero-note{display:none}
+    }
+    @media (prefers-reduced-motion: reduce){
+      html{scroll-behavior:auto}
+      *{animation:none !important;transition:none !important}
+      [data-reveal]{opacity:1;transform:none}
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"HairSalon",
+    "name":"Orhan Taban Kuaför",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"Sedef Sitesi Vedat Günyol Caddesi Atatürk Mahallesi No:46F",
+      "addressLocality":"Ataşehir",
+      "addressRegion":"İstanbul",
+      "addressCountry":"TR"
+    },
+    "telephone":"+90 536 999 92 79",
+    "url":"https://www.instagram.com/orhantaban/",
+    "aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"320"},
+    "openingHours":"Mo-Su 00:00-23:59"
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Orhan Taban anasayfa">
+        <div class="brand-mark"></div>
+        <div>
+          <strong>Orhan Taban Kuaför</strong>
+          <span>Ataşehir · Luxury Hair Studio</span>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="#hizmetler">Hizmetler</a>
+        <a href="#once-sonra">Öncesi Sonrası</a>
+        <a href="#yorumlar">Yorumlar</a>
+        <a href="#iletisim">İletişim</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-secondary" href="tel:+905369999279">Ara</a>
+        <a class="btn btn-primary" href="https://wa.me/905369999279?text=Merhaba%20Orhan%20Taban%20i%C3%A7in%20randevu%20almak%20istiyorum" target="_blank" rel="noreferrer">WhatsApp</a>
+      </div>
+      <button class="menu-toggle" id="menuBtn" aria-label="Menü">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="container mobile-menu" id="mobileMenu">
+      <a href="#hizmetler">Hizmetler</a>
+      <a href="#once-sonra">Öncesi Sonrası</a>
+      <a href="#yorumlar">Yorumlar</a>
+      <a href="#iletisim">İletişim</a>
+      <a class="btn btn-secondary" href="tel:+905369999279">Telefonla Ara</a>
+      <a class="btn btn-primary" href="https://wa.me/905369999279?text=Merhaba%20Orhan%20Taban%20i%C3%A7in%20randevu%20almak%20istiyorum" target="_blank" rel="noreferrer">WhatsApp'tan Yaz</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy" data-reveal>
+          <div class="eyebrow">5.0 puan · 320 yorum · trendlerin ötesinde vizyoner kuaför deneyimi</div>
+          <h1 class="title">Saçı sadece güzelleştirmeyen kadını iyi hissettiren zarif ve üst segment salon deneyimi</h1>
+          <p class="lead">Orhan Taban için siteyi standart kadın kuaförü şablonuyla kurmadım. Çünkü yorumlarda öne çıkan tema sadece güzel sonuç değil. Sanatkar bir bakış, trendlerin ötesinde vizyon, ince yaklaşım, kibarlık, içtenlik ve güven var. Bu yüzden tüm yapı editorial lüksle sıcak zarafeti bir araya getiren bir hat üzerinden kuruldu.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/905369999279?text=Merhaba%20Orhan%20Taban%20i%C3%A7in%20randevu%20almak%20istiyorum" target="_blank" rel="noreferrer">Hemen Randevu Al</a>
+            <a class="btn btn-secondary" href="tel:+905369999279">Telefonla Ara</a>
+            <a class="btn btn-secondary" href="#yorumlar">Yorumları İncele</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat"><strong>320 güçlü yorum</strong><span>Bu kadar yüksek yorum sayısı ve 5.0 puan birleşince marka algısı baştan premium açılıyor.</span></div>
+            <div class="stat"><strong>Vizyoner ustalık</strong><span>Trendlerin ötesinde vizyon ve sanatkar yaklaşım ifadesi salonu sıradan uygulamacıdan ayırıyor.</span></div>
+            <div class="stat"><strong>Zarif iletişim</strong><span>Kibar, içten ve özenli yaklaşım yorumların büyük kısmında tekrar ettiği için güven duygusu çok hızlı kuruluyor.</span></div>
+          </div>
+        </div>
+        <div class="hero-visual" data-reveal>
+          <div class="glow one"></div>
+          <div class="glow two"></div>
+          <div class="visual-shell">
+            <div class="visual-core">
+              <div class="hair-wave"></div>
+              <div class="visual-ribbon"></div>
+              <div class="hero-badge">
+                <strong>Soft luxury aura</strong>
+                <span>Bu işletmenin hissi sert lüks değil. Zarif, sıcak, rafine ve kendinden emin bir premium çizgi.</span>
+              </div>
+              <div class="hero-note">Yorum dili burada dost gibi ağırlanma ve sanatkar yaklaşım vurgusu veriyor. Tasarım da buna göre yumuşak ama pahalı kuruldu.</div>
+              <div class="hero-strip">Balyaj · Boya · Kesim · Keratin · Ombre · Gelin Saçı</div>
+              <div class="hero-float">
+                <strong>Saçı emanet etme güveni</strong>
+                <span>Gönül rahatlığıyla emanet edebileceğiniz yer cümlesi bu markanın en büyük satış silahı.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container proof-grid">
+        <article class="proof-band" data-reveal>
+          <h3>Bu markanın asıl gücü ne</h3>
+          <strong>Sonuç kadar yaklaşımıyla da üst segment hissettiren vizyoner kuaför deneyimi</strong>
+          <p>Orhan Taban markasında en değerli şey yalnızca iyi boya, iyi balyaj ya da iyi kesim değil. Yorumlara göre müşteri kendini özenle dinlenmiş, doğru yönlendirilmiş ve gerçek anlamda iyi hissetmiş ayrılıyor. Bu yüzden bütün akış sonucu gösterirken aynı zamanda yaklaşımın zarafetini de satıyor.</p>
+        </article>
+        <article class="proof-band" data-reveal>
+          <h3>Keskin güven</h3>
+          <p>Yeni taşınan müşterinin yeni kuaförünü bulmuş oldum demesi, tesadüfen girenin müthiş hizmet alması ve zor durumda saçını düzeltti cümleleri tek kelimeyle dönüşüm gücü veriyor.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cards-4">
+          <article class="trust-card" data-reveal>
+            <div class="icon">01</div>
+            <h3>Trend ötesi vizyon</h3>
+            <p>İşletmenin premium değeri modayı taklit etmekten değil, müşteriye yakışanı akıllı şekilde kurgulamaktan geliyor.</p>
+          </article>
+          <article class="trust-card" data-reveal>
+            <div class="icon">02</div>
+            <h3>Sanatkar yaklaşım</h3>
+            <p>Yorumlarda geçen sanatkar kelimesi bu markayı üst düzey algı tarafında çok ileri taşıyor.</p>
+          </article>
+          <article class="trust-card" data-reveal>
+            <div class="icon">03</div>
+            <h3>Zarafet ve kibarlık</h3>
+            <p>Müşterinin sadece saçından değil gördüğü ilgiden etkilenmesi salonun yumuşak lüks karakterini güçlendiriyor.</p>
+          </article>
+          <article class="trust-card" data-reveal>
+            <div class="icon">04</div>
+            <h3>7 gün 24 saat açık</h3>
+            <p>Bu detay erişilebilirlik açısından çok güçlü. Site içinde de acil ihtiyaç ve hızlı ulaşım duygusunu destekliyor.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="once-sonra">
+      <div class="container compare-grid">
+        <div class="compare-stage" data-reveal>
+          <div class="compare-sides">
+            <div class="side before"><div class="pill">Önce</div></div>
+            <div class="side after"><div class="pill">Sonra</div></div>
+          </div>
+          <div class="compare-divider"></div>
+          <div class="compare-handle">⇄</div>
+        </div>
+        <div class="compare-side">
+          <div>
+            <div class="eyebrow">Before After Alanı</div>
+            <h2 class="subhead">Düzeltme değil gerçek dönüşüm hissi</h2>
+            <p class="lead">Bu section burada rastgele yer tutucu değil. Çünkü yorumlarda tam istediğim gibi oldu, zor durumdayken saçımı düzeltti, beklentimin çok üzerinde gibi cümleler var. Bu işletmenin en güçlü alanı dönüşüm etkisi olduğu için before after bölümü premium bir vitrin olarak işlendi.</p>
+          </div>
+          <article class="compare-card" data-reveal>
+            <h3>Kararsız müşteriyi ikna eden katman</h3>
+            <p>Cesaret edememiştim ama iyi ki gelmişim cümlesi burada kritik. Site tasarımı tam o kararsız müşteriyi güvene taşıyacak şekilde akıyor.</p>
+          </article>
+          <article class="compare-card" data-reveal>
+            <h3>Gerçek veri olmayan yerde sallama yok</h3>
+            <p>Uydurma stok görsellerle sahte lüks yapılmadı. Editorial premium placeholder mantığıyla, gelecekte gerçek foto eklenebilir temiz bir sistem kuruldu.</p>
+          </article>
+          <a class="btn btn-primary" href="https://wa.me/905369999279?text=Merhaba%20Orhan%20Taban%20i%C3%A7in%20randevu%20almak%20istiyorum" target="_blank" rel="noreferrer">Randevu İçin Yaz</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="hizmetler">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <div>
+            <div class="eyebrow">Hizmetler</div>
+            <h2 class="subhead">Kadın kuaför premium algısını destekleyen güçlü servis düzeni</h2>
+          </div>
+          <p class="lead">Bütün hizmetleri kalabalık şekilde dizmek yerine, işletmenin dönüşüm ve kalite algısını en iyi taşıyan servisleri seçip premium bir düzende vitrine koydum. Böylece salon daha üst segment ve daha net görünüyor.</p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card" data-reveal>
+            <span class="tag">Signature Color</span>
+            <h3>Balyaj ve Ombre</h3>
+            <p>Yorumlarda tonu doğru analiz etme ve beklenenden iyi sonuç alma vurgusu bu hizmeti öne taşıyor.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="tag">Precision Cut</span>
+            <h3>Kesim ve Şekillendirme</h3>
+            <p>Tam istediğim gibi oldu cümlesini karşılayan ana servis katmanı olarak işlendi.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="tag">Luxury Repair</span>
+            <h3>Keratin ve Düzleştirme</h3>
+            <p>Bakım ve toparlama tarafında profesyonel çözüm hissi veren güçlü bir premium servis alanı.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="tag">Bridal Edit</span>
+            <h3>Gelin Saçı ve Topuz</h3>
+            <p>Zarif ve özel gün odaklı hizmetler salonun lüks algısını yükseltmek için stratejik olarak seçildi.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="tag">Color Studio</span>
+            <h3>Dip Boya ve Tam Boya</h3>
+            <p>Renk uygulamalarında güven ve profesyonellik hissi yaratan temel servis kolonlarından biri.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="tag">Texture Work</span>
+            <h3>Örgü Kıvırcık Saç ve Kaynak</h3>
+            <p>Daha özel teknik işlem isteyen müşteriler için ustalık sinyali veren tamamlayıcı alan.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <div>
+            <div class="eyebrow">Galeri Vitrini</div>
+            <h2 class="subhead">Editorial lüksle sıcak zarafeti birleştiren salon estetiği</h2>
+          </div>
+          <p class="lead">Bu markanın hissi genç parlak şablon salon değil. Daha rafine, daha sakin, daha pahalı ve daha güvenli. O yüzden galeri blokları da sert kontrast yerine yumuşak ışıltı, zarif tonlar ve lüks yüzeylerle tasarlandı.</p>
+        </div>
+        <div class="gallery-grid">
+          <article class="gallery-card large" data-reveal>
+            <span>Luxury Signature</span>
+            <h3>Saça iyi gelen ve aynada kendini daha değerli hissettiren premium salon atmosferi</h3>
+          </article>
+          <article class="gallery-card" data-reveal>
+            <span>Color Mastery</span>
+            <h3>Ton seçiminde vizyon</h3>
+          </article>
+          <article class="gallery-card" data-reveal>
+            <span>Soft Styling</span>
+            <h3>Zarif şekillendirme hissi</h3>
+          </article>
+          <article class="gallery-card" data-reveal>
+            <span>Elegant Care</span>
+            <h3>Özen ve profesyonellik dengesi</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="yorumlar">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <div>
+            <div class="eyebrow">Yorumlar ve Güven</div>
+            <h2 class="subhead">Bu markayı premium yapan şey sonuçla beraber hissettirdiği değer</h2>
+          </div>
+          <p class="lead">Aşağıdaki bloklar doğrudan gönderdiğin yorumların içindeki temel duyguları taşıyor. Buradaki ana mesele saç işlemi değil sadece. Müşterinin değerli hissetmesi, dinlenmesi ve doğru ellere teslim olduğunu anlaması.</p>
+        </div>
+        <div class="review-track" id="reviewTrack">
+          <article class="review-card" data-reveal>
+            <div class="review-top"><div><div class="name">Songül Ersin</div><div class="muted">Sanatkar ve dost gibi ağırlama</div></div><div class="stars">★★★★★</div></div>
+            <p>Trendlerin ötesinde vizyon sahibi bir beyefendi tanımı ve dost ağırlaması gibi hissettirme ifadesi markanın bütün premium omurgasını tek başına kuruyor.</p>
+          </article>
+          <article class="review-card" data-reveal>
+            <div class="review-top"><div><div class="name">Nazif Yaman</div><div class="muted">Kesim ve boya profesyonelliği</div></div><div class="stars">★★★★★</div></div>
+            <p>Sonuç mükemmel oldu ve gönül rahatlığıyla emanet edebileceğiniz bir adres cümlesi yeni müşteri için kusursuz güven metni gibi çalışıyor.</p>
+          </article>
+          <article class="review-card" data-reveal>
+            <div class="review-top"><div><div class="name">Alev Güden</div><div class="muted">Yeni kuaförünü bulmuş olmak</div></div><div class="stars">★★★★★</div></div>
+            <p>Yeni taşınan bir müşterinin burada kalıcı olma kararı vermesi sadakat tarafını çok net güçlendiriyor.</p>
+          </article>
+          <article class="review-card" data-reveal>
+            <div class="review-top"><div><div class="name">Hande Küçükköken</div><div class="muted">Zor durumda saç kurtarma</div></div><div class="stars">★★★★★</div></div>
+            <p>Saçını düzeltmek için ekstra çaba göstermesi ve zarif yaklaşımı işletmeye insani değer katıyor.</p>
+          </article>
+          <article class="review-card" data-reveal>
+            <div class="review-top"><div><div class="name">Nyks</div><div class="muted">Balyajda beklenti üstü sonuç</div></div><div class="stars">★★★★★</div></div>
+            <p>Saç yapısını analiz edip en yakışacak tonu uygulaması teknik kalite tarafını yukarı taşıyor.</p>
+          </article>
+          <article class="review-card" data-reveal>
+            <div class="review-top"><div><div class="name">Nazlı Kartal</div><div class="muted">Cesaret ettiren güven</div></div><div class="stars">★★★★★</div></div>
+            <p>Uzun zamandır cesaret edemeyen müşterinin iyi ki gelmişim demesi dönüşüm ve psikolojik rahatlama etkisini gösteriyor.</p>
+          </article>
+          <article class="review-card" data-reveal>
+            <div class="review-top"><div><div class="name">Çiğdem Demirkaya</div><div class="muted">Boyada profesyonel yaklaşım</div></div><div class="stars">★★★★★</div></div>
+            <p>İnanılmaz memnun kaldım ve gönül rahatlığıyla emanet edebilirsiniz cümlesi salonun satış kapanış metni gibi.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-panel" data-reveal>
+          <div>
+            <h2 class="subhead" style="margin:0">Randevunuzu kolayca oluşturun ve istediğiniz görünümü güvenle planlayın</h2>
+            <p>Kesim, boya, balyaj, bakım veya özel gün hazırlığı için hızlıca iletişime geçin. 7 gün 24 saat açık görünmesi sayesinde erişim bariyeri çok düşük. Bu da dönüşüm açısından büyük avantaj.</p>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:12px">
+            <a class="btn btn-primary" href="https://wa.me/905369999279?text=Merhaba%20Orhan%20Taban%20i%C3%A7in%20randevu%20almak%20istiyorum" target="_blank" rel="noreferrer">WhatsApp'tan Yaz</a>
+            <a class="btn btn-secondary" href="tel:+905369999279">Telefonla Ara</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <div>
+            <div class="eyebrow">Sık Sorulanlar</div>
+            <h2 class="subhead">Karar sürecini kısaltan net cevaplar</h2>
+          </div>
+        </div>
+        <div class="faq-grid">
+          <article class="faq-item" data-reveal>
+            <h3>Orhan Taban neden farklı hissettiriyor</h3>
+            <p>Burada premium his yalnızca dekor ya da parlak kelimelerden değil, yorumlarda geçen vizyon, kibarlık, ilgi ve doğru sonuç birlikteliğinden geliyor.</p>
+          </article>
+          <article class="faq-item" data-reveal>
+            <h3>Hangi hizmetler daha çok öne çıkıyor</h3>
+            <p>Balyaj, boya, kesim, keratin, düzleştirme ve özel gün saç tasarımı tarafı bu markanın dönüşüm gücünü en iyi taşıyan servisler arasında.</p>
+          </article>
+          <article class="faq-item" data-reveal>
+            <h3>Salon çalışma saatleri nasıl</h3>
+            <p>Gönderdiğin verilere göre haftanın her günü 24 saat açık bilgisi bulunuyor. Bu detay erişilebilirlik açısından ciddi avantaj sağlıyor.</p>
+          </article>
+          <article class="faq-item" data-reveal>
+            <h3>Randevu için en hızlı yol hangisi</h3>
+            <p>Mobil alt sabit aksiyonlar, hero butonları ve iletişim alanındaki WhatsApp bağlantıları hızlı dönüşüm için hazırlandı.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="iletisim">
+      <div class="container contact-grid">
+        <div class="contact-stack">
+          <article class="contact-card" data-reveal>
+            <h3>İletişim</h3>
+            <div class="row"><span class="label">Telefon</span><a href="tel:+905369999279">0536 999 92 79</a></div>
+            <div class="row"><span class="label">WhatsApp</span><a href="https://wa.me/905369999279?text=Merhaba%20Orhan%20Taban%20i%C3%A7in%20randevu%20almak%20istiyorum" target="_blank" rel="noreferrer">Randevu için yazın</a></div>
+            <div class="row"><span class="label">Instagram</span><a href="https://www.instagram.com/orhantaban/" target="_blank" rel="noreferrer">@orhantaban</a></div>
+            <div class="row"><span class="label">Adres</span><span>Sedef Sitesi Vedat Günyol Caddesi Atatürk Mahallesi No:46F, Ataşehir / İstanbul</span></div>
+          </article>
+          <article class="hours-card" data-reveal>
+            <h3>Çalışma Saatleri</h3>
+            <div class="hours-row"><span>Pazartesi</span><span>24 saat açık</span></div>
+            <div class="hours-row"><span>Salı</span><span>24 saat açık</span></div>
+            <div class="hours-row"><span>Çarşamba</span><span>24 saat açık</span></div>
+            <div class="hours-row"><span>Perşembe</span><span>24 saat açık</span></div>
+            <div class="hours-row"><span>Cuma</span><span>24 saat açık</span></div>
+            <div class="hours-row"><span>Cumartesi</span><span>24 saat açık</span></div>
+            <div class="hours-row"><span>Pazar</span><span>24 saat açık</span></div>
+          </article>
+        </div>
+        <div class="map" data-reveal>
+          <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Orhan Taban konum" src="https://www.google.com/maps?q=Sedef%20Sitesi%20Vedat%20G%C3%BCnyol%20Caddesi%20Atat%C3%BCrk%20Mahallesi%20No46F%20Ata%C5%9Fehir%20%C4%B0stanbul&z=15&output=embed"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <strong>Orhan Taban Kuaför</strong>
+        <div class="footer-note">Ataşehir'de vizyoner saç tasarımı, zarif yaklaşım ve premium salon deneyimi</div>
+        <div class="credit">site by penumbra digital</div>
+      </div>
+      <div class="footer-links">
+        <a href="#top">Anasayfa</a>
+        <a href="#hizmetler">Hizmetler</a>
+        <a href="#yorumlar">Yorumlar</a>
+        <a href="#iletisim">İletişim</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="floating-cta">
+    <a class="btn btn-secondary" href="tel:+905369999279">Ara</a>
+    <a class="btn btn-primary" href="https://wa.me/905369999279?text=Merhaba%20Orhan%20Taban%20i%C3%A7in%20randevu%20almak%20istiyorum" target="_blank" rel="noreferrer">WhatsApp</a>
+  </div>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if(menuBtn){
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.style.display = mobileMenu.style.display === 'grid' ? 'none' : 'grid';
+      });
+    }
+
+    const reveals = document.querySelectorAll('[data-reveal]');
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(reduce){
+      reveals.forEach(el => el.classList.add('is-visible'));
+    } else {
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting){
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, {threshold:.14});
+      reveals.forEach(el => io.observe(el));
+    }
+
+    const reviewTrack = document.getElementById('reviewTrack');
+    let autoScroll;
+    function startAuto(){
+      if(!reviewTrack || window.innerWidth < 781 || reduce) return;
+      clearInterval(autoScroll);
+      autoScroll = setInterval(() => {
+        const max = reviewTrack.scrollWidth - reviewTrack.clientWidth;
+        const next = reviewTrack.scrollLeft + 340;
+        reviewTrack.scrollTo({left: next >= max ? 0 : next, behavior:'smooth'});
+      }, 3600);
+    }
+    reviewTrack?.addEventListener('pointerdown', () => clearInterval(autoScroll));
+    reviewTrack?.addEventListener('pointerup', startAuto);
+    window.addEventListener('resize', startAuto);
+    startAuto();
+  </script>
+</body>
+</html>
